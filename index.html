@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#E9EDF3">
-  <meta name="description" content="Shubham Joshi — engineering leader, curious builder, and writer. A personal portfolio with a different art direction every visit.">
+  <meta name="description" content="Shubham Joshi — engineering leader, independent builder, and writer. Building systems, making games, and exploring what happens next.">
   <meta property="og:title" content="Shubham Joshi — A portfolio in many editions.">
   <meta property="og:description" content="Engineering leadership, playful products, and ideas about what happens next — reimagined every visit.">
   <meta property="og:type" content="website">
@@ -290,6 +290,28 @@ body[data-layout="split"] .hero-visual,body[data-layout="editorial"] .hero-visua
 .cover-brand-pub.substack-fallback:before{content:"SO";display:grid;place-items:center;width:30px;height:30px;flex:0 0 30px;border-radius:7px;background:#25262e;color:#f0d5b6;font:700 10px/1 Georgia,serif;letter-spacing:-.08em}
 @media(max-width:650px){.published-game-art{padding:18px}.guess-main-wordmark{font-size:clamp(25px,8vw,35px)}.guess-main-wordmark b{width:46px;height:46px}.published-life-lockup img{width:68px;height:68px}.published-scale-lockup{gap:11px;padding:16px 14px}.published-scale-lockup img{width:50px;height:50px;flex-basis:50px}.published-scale-lockup strong{font-size:clamp(17px,5vw,25px)}.published-scale-lockup small{font-size:7px;letter-spacing:.05em}.guess-published-mark{width:65px!important;flex-basis:65px!important}}
 
+    /* Focus pillars: make the portfolio's three real areas of work visible in the opening viewport. */
+    .hero{min-height:0;padding-top:40px;padding-bottom:36px}
+    .hero h1{font-size:clamp(42px,5.2vw,70px);line-height:.98;letter-spacing:-.078em;max-width:640px;margin-bottom:21px}
+    .hero-copy>p:not(.overline){font-size:14px;line-height:1.68;margin-bottom:18px;max-width:530px}
+    .focus-areas{max-width:590px;margin:0 0 20px}
+    .focus-areas-label{margin:0 0 9px!important;font-size:8px!important;line-height:1.4!important;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:var(--muted)!important}
+    .focus-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .focus-link{--focus-accent:var(--blue);display:flex;min-width:0;min-height:100px;flex-direction:column;align-items:stretch;justify-content:space-between;padding:11px 12px 10px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--white) 78%,transparent);box-shadow:0 5px 16px rgba(32,33,49,.035);transition:transform .18s,border-color .18s,box-shadow .18s,background .18s}
+    .focus-link:hover,.focus-link:focus-visible{transform:translateY(-3px);border-color:var(--focus-accent);box-shadow:0 10px 25px rgba(32,33,49,.09);background:color-mix(in srgb,var(--white) 94%,transparent)}
+    .focus-engineering{--focus-accent:var(--blue)}.focus-play{--focus-accent:var(--coral)}.focus-writing{--focus-accent:#6b568f}
+    .focus-link-top{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-bottom:8px}
+    .focus-symbol{display:grid;place-items:center;width:25px;height:25px;border-radius:8px;color:var(--focus-accent);background:color-mix(in srgb,var(--focus-accent) 12%,transparent)}
+    .focus-symbol svg{display:block;width:19px;height:19px}
+    .focus-link-number{font-size:8px;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+    .focus-link strong{display:block;margin:0 0 10px;color:var(--ink);font-size:clamp(11px,1.04vw,13px);line-height:1.2;letter-spacing:-.025em}
+    .focus-link-cue{display:flex;align-items:center;justify-content:space-between;gap:5px;font-size:8px;line-height:1.2;color:var(--muted);font-weight:600;white-space:normal}
+    .focus-link-cue b{font-size:13px;color:var(--focus-accent);font-weight:700;flex:0 0 auto}
+    .hero-note{margin-top:19px}
+    @media(max-width:900px){.hero{padding-top:32px;padding-bottom:30px}.hero h1{font-size:clamp(39px,5.6vw,58px)}.focus-link{min-height:98px;padding:10px}}
+    @media(max-width:650px){.hero{padding-top:26px;padding-bottom:25px}.hero h1{font-size:clamp(42px,10vw,58px);line-height:.99;margin-bottom:18px}.hero-copy>p:not(.overline){font-size:13px;line-height:1.65;margin-bottom:16px}.focus-areas{margin-bottom:17px}.focus-links{gap:6px}.focus-link{min-height:99px;padding:9px 8px;border-radius:12px}.focus-link strong{font-size:11px;margin-bottom:8px}.focus-link-cue{font-size:7px;letter-spacing:-.01em}.focus-symbol{width:23px;height:23px}.focus-symbol svg{width:17px;height:17px}.hero-note{margin-top:16px}}
+    @media(prefers-reduced-motion:reduce){.focus-link{transition:none}.focus-link:hover{transform:none}}
+
   </style>
 </head>
 <body data-theme="modern-heritage" data-lineage="contemporary" data-layout="split" data-logo="brand-colour">
@@ -389,10 +411,31 @@ body[data-layout="split"] .hero-visual,body[data-layout="editorial"] .hero-visua
 
     <section class="hero wrap" id="top">
       <div class="hero-copy">
-        <p class="overline"><i></i> Engineering leader · Curious builder</p>
-        <h1>Build with<br><span class="serif">intention.</span><br>Make it <span class="under">matter.</span></h1>
-        <p>I’m Shubham — I lead engineering teams and build data platforms at scale. Outside the day job, I make small games and write about the ideas that change how we see the world.</p>
-        <div class="hero-actions"><a class="btn btn-dark" href="#projects">Explore what I build <span aria-hidden="true">↘</span></a><a class="btn btn-light" href="https://thesecondordereffect.substack.com/" target="_blank" rel="noopener noreferrer">Read my writing <span aria-hidden="true">↗</span></a></div>
+        <p class="overline"><i></i> Engineering leader · Independent builder · Writer</p>
+        <h1>I build systems,<br><span class="serif">make games,</span><br>and write about <span class="under">what happens next.</span></h1>
+        <p>I lead data-platform engineering at Ford. Outside work, I build browser games and publish <strong>The Second Order Effect</strong> — exploring AI, technology, work, and the consequences that follow.</p>
+        <div class="focus-areas">
+          <p class="focus-areas-label">THREE WAYS I SPEND MY CURIOSITY</p>
+          <div class="focus-links" aria-label="Explore my three areas of focus">
+            <a class="focus-link focus-engineering" href="#experience">
+              <span class="focus-link-top"><span class="focus-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="3" y="5" width="11" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="18" y="5" width="11" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="10.5" y="19" width="11" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 14v2.5h15V14M16 16.5V19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span class="focus-link-number">01</span></span>
+              <strong>Engineering<br>at scale</strong>
+              <span class="focus-link-cue">Teams · Data · Systems <b aria-hidden="true">↘</b></span>
+            </a>
+            <a class="focus-link focus-play" href="#projects">
+              <span class="focus-link-top"><span class="focus-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M10 7.5h12a6 6 0 0 1 5.8 7.5l-1.3 5.1a3.5 3.5 0 0 1-5.8 1.6l-3.1-2.7h-3.2l-3.1 2.7a3.5 3.5 0 0 1-5.8-1.6L4.2 15A6 6 0 0 1 10 7.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 12v6M7 15h6M21.5 13.5h.1M24.5 16.5h.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="focus-link-number">02</span></span>
+              <strong>Playful<br>products</strong>
+              <span class="focus-link-cue">Games · Experiments <b aria-hidden="true">↘</b></span>
+            </a>
+            <a class="focus-link focus-writing" href="#writing">
+              <span class="focus-link-top"><span class="focus-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 4.5h11l6 6V27.5H8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M19 4.5v6h6M12 16h9M12 20h9M12 24h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span class="focus-link-number">03</span></span>
+              <strong>Writing<br>&amp; ideas</strong>
+              <span class="focus-link-cue">AI · Work · What’s next <b aria-hidden="true">↘</b></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-actions"><a class="btn btn-dark" href="#projects">Explore the games <span aria-hidden="true">↘</span></a><a class="btn btn-light" href="https://thesecondordereffect.substack.com/" target="_blank" rel="noopener noreferrer">Read the newsletter <span aria-hidden="true">↗</span></a></div>
         <div class="hero-note"><span class="note-dot"></span> Based in India · Building for a curious internet</div><div class="edition-note"><span class="edition-orbit" aria-hidden="true"></span><span>THIS VISIT’S EDITION</span><strong id="editionName">Modern Heritage / Split</strong><button type="button" id="inlineShuffle">Shuffle ↻</button></div>
       </div>
       <div class="hero-visual" aria-label="Abstract artwork representing the overlap of engineering, ideas, and playful products" role="img">
